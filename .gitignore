@@ -1,0 +1,77 @@
+# ============================================================
+#  MCreator 工作区 · Minecraft Forge 1.20.1 (Forge 47.2.0)
+#  放置路径：C:\Users\HiteVision\MCreatorWorkspaces\zilol_forceful\.gitignore
+# ============================================================
+
+# ---------- 1. MCreator 生成 / 缓存 ----------
+.mcreator/
+# 工作区自动备份（体积大且不断增长）
+*.mcreator-backup_*
+# 旧版 MCreator 可能生成的临时目录
+.mcreator/cache/
+
+# ---------- 2. Gradle ----------
+.gradle/
+build/
+out/
+# 保留 gradle-wrapper.jar，保证别人 clone 后能直接 ./gradlew 构建
+# gradle/wrapper/gradle-wrapper.jar
+
+# ---------- 3. Forge 运行环境（run 目录）----------
+run/
+# run 目录内常见产物，若上面 run/ 已忽略可不必重复
+run/data/
+run/logs/
+run/config/
+run/saves/
+run/mods/
+run/resourcepacks/
+run/defaultconfigs/
+run/*.log
+run/options.txt
+run/server.properties
+run/servers.dat
+
+# ---------- 4. Eclipse / MCreator 自带 IDE 配置 ----------
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+
+# ---------- 5. IntelliJ IDEA ----------
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ---------- 6. VS Code ----------
+.vscode/
+*.code-workspace
+
+# ---------- 7. 日志与崩溃报告 ----------
+*.log
+logs/
+crash-reports/
+hs_err_*.log
+replay_pid*.log
+
+# ---------- 8. 系统 / 编辑器垃圾文件 ----------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# ---------- 9. 明确纳入版本控制（不被忽略）----------
+# 下面这些是工作区的核心资产，务必提交：
+#   zilol_forceful.mcreator   ← 所有模组元素定义（最重要）
+#   src/main/java/...         ← 自定义代码
+#   src/main/resources/...    ← 资源（模型/贴图/语言文件）
+#   build.gradle / mcreator.gradle / settings.gradle / gradle.properties
+#   gradle/wrapper/gradle-wrapper.properties
+!src/main/java/
+!src/main/resources/
+!gradle/wrapper/gradle-wrapper.jar
